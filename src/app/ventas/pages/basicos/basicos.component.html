@@ -1,0 +1,83 @@
+<div class="text-layout">
+    <h1>Pipes Básicos</h1>
+    <p>
+        Pipes Incluidos en Angular - Usualmente en el Common Module.
+    </p>
+</div>
+<div class="grid">
+
+    <div class="col-12 md:col-6 lg:col-4 xl:col-4 " >
+        <p-card header="uppercase "
+                [subheader]="nombreLower| uppercase ">  
+                {{ nombreLower  }}        
+        </p-card>
+        
+    </div>
+
+    <div class="col-12 md:col-6 lg:col-4 xl:col-4 ">
+        
+        <p-card header="lowercase"
+                [subheader]="nombreLower| lowercase ">  
+                {{ nombreUpper }}   
+        </p-card>
+    </div>
+
+    <div class="col-12 md:col-6 lg:col-4 xl:col-4">
+        
+        <p-card header="titlecase"
+                [subheader]="nombreCompleto| titlecase ">  
+                {{ nombreCompleto }}        
+        </p-card>
+
+    </div>
+</div>
+
+<div class="text-layout">
+    <h1>Date | Fecha | Pipe</h1>
+    <p>
+        Pipe para mostrar las fechas.
+    </p>
+</div>
+
+<div class="grid">
+
+    <div class="col-12 xl:col-6 lg:-col-6 md:col-6 text-xs" >
+        <p-card>
+            <ul>
+                <li>fecha</li>
+                <li>fecha | date</li>
+                <li>fecha | date : 'short'</li>
+                <li>fecha | date : 'long'</li>
+                <li>fecha | date : 'EEEE, dd, LLLL, yyyy | hh:mm'</li>
+            </ul>
+            <hr>
+            <ul>   
+                <li>fecha | date : 'long':'GMT-8'</li>
+                <li>fecha | date : 'long':'GMT-4'</li>
+                <li>fecha | date : 'long':'':'fr'</li>
+            </ul>
+
+        </p-card>
+    </div>
+    <div class="col-12 xl:col-6 lg:-col-6 md:col-6 text-xs" >
+        <p-card>
+            <ul>
+                <li>{{ fecha }}</li>
+                <li>{{ fecha | date }}</li>
+                <li>{{ fecha | date : 'short'}}</li>
+                <li>{{ fecha | date : 'long'}}</li>
+                <li>{{ fecha | date : 'cccc, dd, LLLL, yyyy | hh:mm'  }}</li>
+                <!-- Para cambiar el lenguaje importamos el localeEs en el AppModule -->
+            </ul>
+            <hr>
+            <ul>
+                
+                <li>{{fecha | date : 'long':'GMT-8'}}</li>
+                <li>{{fecha | date : 'long':'GMT-4'}}</li>
+                <li>{{fecha | date : 'long':'':'fr'}}</li>
+            </ul>
+
+        </p-card>
+    </div>
+
+</div>
